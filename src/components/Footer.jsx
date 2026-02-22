@@ -1,82 +1,103 @@
-function Footer() {
+import logoWhite from "../assets/logo white.png"; // or "../assets/logo-white.png"
+
+export default function Footer() {
   return (
-    <footer className="bg-[#191A23] text-white px-6 md:px-8 py-16 rounded-[40px] mt-16">
+    <footer className="relative bg-[#191A23] text-white px-6 sm:px-10 py-14 rounded-[40px] mt-20">
+      <div className="max-w-[1240px] mx-auto">
 
-      <div className="max-w-[1200px] mx-auto">
+       {/* TOP LINE: Logo + Links (together) + Icons */}
+<div className="flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-between">
 
-        {/* Top Footer */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+  {/* LEFT: Logo + Links together (so mobile links stay under logo) */}
+  <div className="flex flex-col items-center gap-6 md:items-start">
+    {/* Logo */}
+    <div className="flex items-center gap-3">
+      <img src={logoWhite} alt="Positivus" className="h-8 w-auto" />
+      <span className="text-2xl font-semibold">Positivus</span>
+    </div>
 
-          {/* Company Info */}
-          <div className="text-center md:text-left">
-            <h3 className="text-3xl font-semibold mb-6">✦ Positivus</h3>
+    {/* Links */}
+    <div className="flex flex-col items-center text-center gap-3 md:flex-row md:gap-8 md:text-left text-sm underline underline-offset-4 opacity-90">
+      <a href="#">About us</a>
+      <a href="#">Services</a>
+      <a href="#">Use Cases</a>
+      <a href="#">Pricing</a>
+      <a href="#">Blog</a>
+    </div>
+  </div>
 
-            <h3 className="text-lg font-semibold mb-4">
-              <span className="bg-[#B9FF66] text-black px-3 py-1 rounded-md">
-                Contact Us:
-              </span>
-            </h3>
 
-            <p className="mt-4 text-sm opacity-70 leading-7">
-              Email: info@positivus.com<br />
-              Phone: 222-555-1234<br />
-              Address: 123 Main St, Anytown, USA
-            </p>
+{/* Social Icons - Desktop only */}
+<div className="hidden md:flex items-center gap-5 text-xl">
+  <a href="#" className="hover:text-[#B9FF66] transition">
+    <i className="fa-brands fa-linkedin"></i>
+  </a>
+  <a href="#" className="hover:text-[#B9FF66] transition">
+    <i className="fa-brands fa-facebook"></i>
+  </a>
+  <a href="#" className="hover:text-[#B9FF66] transition">
+    <i className="fa-brands fa-twitter"></i>
+  </a>
+</div>
+</div>
+        {/* SECOND ROW: Contact + Subscribe */}
+        <div className="mt-10 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
+          
+          {/* Contact */}
+          <div className="max-w-[360px]">
+            <span className="bg-[#B9FF66] text-[#191A23] px-4 py-1 rounded-md font-medium">
+              Contact us:
+            </span>
+
+            <div className="mt-4 text-sm space-y-2 opacity-80">
+              <p>Email: info@positivus.com</p>
+              <p>Phone: 555-567-8901</p>
+              <p>
+                Address: 1234 Main St<br />
+                Moonstone City, Stardust State 12345
+              </p>
+            </div>
           </div>
 
-          {/* Links */}
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 underline text-gray-300 text-sm md:text-base text-center md:text-left">
-            <a href="#">About us</a>
-            <a href="#">Services</a>
-            <a href="#">Use Cases</a>
-            <a href="#">Pricing</a>
-            <a href="#">Blog</a>
-          </div>
-
-          {/* Newsletter */}
-          {/* <div className="bg-[#2A2B35] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+          {/* Subscribe Box */}
+          <div className="bg-white/5 p-6 rounded-2xl flex flex-col sm:flex-row gap-4 w-full lg:w-[520px]">
             <input
               type="email"
               placeholder="Email"
-              className="bg-transparent border border-gray-500 rounded-xl px-6 py-4 w-full md:w-72 outline-none"
+              className="flex-1 px-4 py-3 rounded-xl bg-transparent border border-white/40 text-white outline-none"
             />
-
-            <button className="bg-[#B9FF66] text-black px-8 py-4 rounded-xl font-semibold w-full md:w-auto">
+            <button className="bg-[#B9FF66] text-[#191A23] px-6 py-3 rounded-xl font-medium">
               Subscribe to news
             </button>
           </div>
+        </div>
 
-        </div> */}
-
-        <div className="bg-[#2A2B35] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 w-full">
-  
-  <input
-    type="email"
-    placeholder="Email"
-    className="bg-transparent border border-gray-500 rounded-xl px-6 py-4 w-full md:flex-1 outline-none"
-  />
-
-  <button className="bg-[#B9FF66] text-black px-8 py-4 rounded-xl font-semibold w-full md:w-auto">
-    Subscribe to news
-  </button>
-
+        {/* Social Icons - Mobile only (after subscribe) */}
+<div className="flex md:hidden items-center justify-center gap-5 text-xl mt-8">
+  <a href="#" className="hover:text-[#B9FF66] transition">
+    <i className="fa-brands fa-linkedin"></i>
+  </a>
+  <a href="#" className="hover:text-[#B9FF66] transition">
+    <i className="fa-brands fa-facebook"></i>
+  </a>
+  <a href="#" className="hover:text-[#B9FF66] transition">
+    <i className="fa-brands fa-twitter"></i>
+  </a>
 </div>
- </div>
-        {/* Bottom Footer */}
-       {/* Bottom Footer */}
-<div className="mt-12 border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center gap-4 text-gray-400 text-sm">
-  
+
+        {/* Divider */}
+        <div className="border-t border-white/20 my-10"></div>
+
+        {/* Bottom Row */}
+       <div className="flex items-center justify-between text-sm opacity-80">
   <div className="flex items-center gap-6">
-    <p>© 2026 Positivus. All Rights Reserved.</p>
-    <a href="#" className="underline">
+    <p>© 2023 Positivus. All Rights Reserved.</p>
+    <a href="#" className="underline underline-offset-4">
       Privacy Policy
     </a>
   </div>
-
 </div>
       </div>
     </footer>
-  )
+  );
 }
-
-export default Footer

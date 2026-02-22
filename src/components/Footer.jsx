@@ -1,14 +1,14 @@
-import logoWhite from "../assets/logo white.png"; // or "../assets/logo-white.png"
+import logoWhite from "../assets/logo white.png"; 
 
 export default function Footer() {
   return (
     <footer className="relative bg-[#191A23] text-white px-6 sm:px-10 py-14 rounded-[40px] mt-20">
       <div className="max-w-[1240px] mx-auto">
 
-       {/* TOP LINE: Logo + Links (together) + Icons */}
+       
 <div className="flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-between">
 
-  {/* LEFT: Logo + Links together (so mobile links stay under logo) */}
+
   <div className="flex flex-col items-center gap-6 md:items-start">
     {/* Logo */}
     <div className="flex items-center gap-3">
@@ -40,7 +40,7 @@ export default function Footer() {
   </a>
 </div>
 </div>
-        {/* SECOND ROW: Contact + Subscribe */}
+        {/* Subscribe */}
         <div className="mt-10 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
           
           {/* Contact */}
@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social Icons - Mobile only (after subscribe) */}
+        {/* Social Icons - Mobile only  */}
 <div className="flex md:hidden items-center justify-center gap-5 text-xl mt-8">
   <a href="#" className="hover:text-[#B9FF66] transition">
     <i className="fa-brands fa-linkedin"></i>

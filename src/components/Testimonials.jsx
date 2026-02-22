@@ -72,10 +72,9 @@ function Testimonials() {
 
     </div>
 
-    {/* Navigation Dots */}
-   {/* Bottom Controls (Back - Logos - Next) */}
+   
 <div className="mt-10 flex items-center justify-between px-2 md:px-10">
-  {/* Back arrow */}
+ 
   <button
     type="button"
     className="text-white/40 hover:text-white transition text-4xl leading-none"
@@ -84,7 +83,7 @@ function Testimonials() {
     &#8592;
   </button>
 
-  {/* White logo icons (instead of dots) */}
+  {/* icons  */}
   <div className="flex items-center gap-4">
     <img src={logoWhite} alt="" className="h-4 w-4 opacity-100 rotate-45" />
     <img src={logoWhite} alt="" className="h-4 w-4 opacity-40 rotate-45" />
